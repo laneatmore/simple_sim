@@ -23,18 +23,7 @@ conda activate /cluster/projects/nn9244k/for_lane/msprime-env
 
 #for chr {1..22}; do for size in $(less sample_size.list); \
 #do for dem in $(less dems.list); do \
-#sbatch run_msprime.sh $chr $dem $size $size $size; done; done; done
-
-
-#chrom=$1
-#dem_option=$2
-#pop1_sample_size=$3
-#pop2_sample_size=$4
-#pop3_sample_size=$5
-
-
-#python model_admix.py 1000 5000 1000 6000 0.8 0.2 $chrom \
-#$dem_option $pop1_sample_size $pop2_sample_size $pop3_sample_size
+#sbatch run_msprime.sh $chr $dem $size; done; done; done
 
 chrom=$1
 dem_option=$2
