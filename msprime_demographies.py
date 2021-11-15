@@ -1,17 +1,8 @@
 #!/usr/bin/env python3
 
 import numpy as np
-import subprocess
 import sys
-import os
-import pandas as pd
 import msprime
-
-
-pd.set_option('display.max_columns', None)
-pd.set_option('display.max_rows', None)
-pd.set_option('display.width', None)
-pd.set_option('display.max_colwidth', None)
 
 chrom = int(sys.argv[1]) #chromosome
 dem_option = sys.argv[2] #which model?
