@@ -39,8 +39,7 @@ def model_constant(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=500)
-	model.add_population_parameters_change(time = 500, initial_size = 500, population = 'pop1')
+	model.add_population(name='pop1', initial_size=1000)
 	print('population 1 added', flush = True)
 
 	#make sure it writes out in nucleotides
@@ -102,13 +101,13 @@ def model_expansion(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=500, growth_rate = 0.1)
+	model.add_population(name='pop1', initial_size=1000, growth_rate = 0.01)
 	print('population 1 added', flush = True)
 	#add the population collapse
 	#Change population size in the past
 	#add instantaneous bottleneck with growth rate of zero afterwards?
 	
-	model.add_population_parameters_change(time = 25, population = 'pop1', growth_rate = 0)
+	model.add_population_parameters_change(time = 150, population = 'pop1', growth_rate = 0)
 	print('growth rate added', flush = True)
 
 	#make sure it writes out in nucleotides
@@ -171,10 +170,10 @@ def model_collapse(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=100, growth_rate = -0.1)
+	model.add_population(name='pop1', initial_size=10000, growth_rate = -0.01)
 	print('population 1 added', flush = True)
 	#add the population expansion
-	model.add_population_parameters_change(time=25, population = 'pop1', growth_rate = 0)
+	model.add_population_parameters_change(time=150, population = 'pop1', growth_rate = 0)
 	#model.add_population_parameters_change(time = 100, initial_size = 500, population = 'pop1')
 	print('growth rate added', flush = True)
 
