@@ -39,7 +39,7 @@ def model_constant(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=1000)
+	model.add_population(name='pop1', initial_size=10000)
 	print('population 1 added', flush = True)
 
 	#make sure it writes out in nucleotides
@@ -101,7 +101,7 @@ def model_expansion(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=1000, growth_rate = 0.01)
+	model.add_population(name='pop1', initial_size=1000000, growth_rate = 0.03)
 	print('population 1 added', flush = True)
 	#add the population collapse
 	#Change population size in the past
