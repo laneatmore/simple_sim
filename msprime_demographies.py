@@ -170,7 +170,7 @@ def model_collapse(chrom, dem_option, sample_pop1):
 	model = msprime.Demography()
 	print('demography set', flush = True)
 	#we just have one population 
-	model.add_population(name='pop1', initial_size=10000, growth_rate = -0.01)
+	model.add_population(name='pop1', initial_size=10000, growth_rate = -0.03)
 	print('population 1 added', flush = True)
 	#add the population expansion
 	model.add_population_parameters_change(time=150, population = 'pop1', growth_rate = 0)
